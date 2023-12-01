@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-cb1bca59-0f98-4369-8e47-1bbb3153b43e"></div>
+
+
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRCT5LQER0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRCT5LQER0');
+</script>
+
+
+
+
+
+
+
+
+<style>
+
+ .svg-image {
+    width: 40px;
+    height: 40px;
+    fill: red; /* Cambiar el color de relleno */
+  }
+
+  
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+  .container2.show-popup .product {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .container2.show-popup .product__overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  
+    .container2.show-popup {
+    display: flex;
+    
+  }
+  
+  
+  .container2 {
+  
+  max-width: 1250px;
+  border-radius: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: 960px;
+  height: 90vh;
+  width: 100%;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out;
+  
+  scroll-behavior: smooth;
+  background-color: #f6f5f7;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
+}
+
+.container2.visible {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 980px) {
+  .container {
+    max-height: none;
+    border-radius: 0;
+    height: 100%;
+  }
+}
+
+.nav {
+  width: 100px;
+  height: 100%;
+  background-color: #08090a;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .nav {
+    width: 60px;
+  }
+}
+.nav__text {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+@media (max-width: 800px) {
+  .nav__text {
+    display: none;
+  }
+}
+.nav__shop {
+  width: 24px;
+}
+.nav__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav__cart span {
+  background-color: var(--main-color);
+  border: 2px solid #08090a;
+  height: 20px;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 20px;
+  color: #fff;
+  line-height: 1;
+  right: -6px;
+  top: -8px;
+  position: absolute;
+}
+
+.logo {
+  color: var(--main-color);
+  width: 32px;
+}
+
+
+
+
+.cover2 {
+  background-image: url("https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/la-aurora.png");
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  background-position: center;
+  text-align: center;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+@media (max-width: 980px) {
+  .cover2 {
+    width: 100%;
+    max-width: 500px; /* Limit the maximum width of the cover */
+  }
+}
+
+
+
+
+
+
+
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+  background-color: #fff;
+  width: 310px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  transition: 0.6s;
+  flex-shrink: 0;
+}
+.product + .product {
+  margin-left: 6px;
+}
+.product__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 40px 0;
+  max-width: 500px;
+  transition: 0.3s;
+}
+.product__title {
+  max-width: 12ch;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0;
+  transition: 0.6s;
+}
+.product__brand {
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.6s;
+}
+.product__price {
+  margin-bottom: 30px;
+  transition: 0.6s;
+}
+.product__subtitle {
+  color: #414041;
+  line-height: 1.5em;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.product__subtitle--expanded {
+  display: none;
+}
+.product__detail {
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.product__detail-img {
+  display: none;
+}
+.product__buttons {
+  align-items: center;
+  display: none;
+  min-width: 80%;
+  margin-bottom: 36px;
+}
+@media (max-width: 1010px) {
+  .product__buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.product__options {
+  display: flex;
+  align-items: center;
+}
+.product__option {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: var(--font);
+  margin-right: -1px;
+}
+@media (max-width: 650px) {
+  .product__option {
+    padding: 8px 16px;
+  }
+}
+.product__option:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.product__option:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.product__option--active {
+  background-color: var(--border-color);
+  color: #fff;
+  border-color: var(--border-color);
+}
+.product__option.product__add {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-left: 16px;
+  flex-grow: 1;
+  border-radius: 4px;
+  border-color: var(--main-color);
+}
+@media (max-width: 1010px) {
+  .product__option.product__add {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+
+.product--active {
+  width: 70%;
+  padding-left: 70px;
+  padding-right: 70px;
+  overflow-y: auto;
+  padding-bottom: 0;
+}
+@media (max-width: 650px) {
+  .product--active {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.product--active .product__title {
+  font-size: 44px;
+  max-width: none;
+}
+@media (max-width: 650px) {
+  .product--active .product__title {
+    font-size: 28px;
+  }
+}
+.product--active .product__detail {
+  display: none;
+}
+.product--active .product__price {
+  font-size: 24px;
+}
+.product--active .product__brand {
+  font-size: 16px;
+}
+.product--active .product__subtitle {
+  display: none;
+}
+.product--active .product__detail-img {
+  display: block;
+  margin-top: 20px;
+  margin: 20px -70px 0;
+  max-width: none;
+  width: calc(100% + 140px);
+}
+@media (max-width: 650px) {
+  .product--active .product__detail-img {
+    width: calc(100% + 60px);
+  }
+}
+.product--active .product__subtitle--expanded {
+  display: block;
+  -webkit-animation-name: transform;
+          animation-name: transform;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.product--active .product__buttons {
+  display: flex;
+  -webkit-animation-name: transform;
+          animation-name: transform;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.product--active .product__table,
+.product--active .product__grid,
+.product--active .product__close {
+  display: flex;
+}
+
+.product__table {
+  background-color: #08090a;
+  color: #fff;
+  margin: 0 -70px;
+  padding: 70px 100px;
+  width: calc(100% + 140px);
+  flex-direction: column;
+  display: none;
+}
+@media (max-width: 650px) {
+  .product__table {
+    width: calc(100% + 60px);
+    padding: 50px 30px;
+  }
+}
+.product__table-title {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.product__table-row {
+  display: flex;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 650px) {
+  .product__table-row {
+    flex-direction: column;
+  }
+}
+.product__table-cell {
+  line-height: 1.5;
+  font-size: 14px;
+}
+.product__table-cell:first-child {
+  flex-shrink: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  width: 260px;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 650px) {
+  .product__table-cell:first-child {
+    width: auto;
+    margin-bottom: 2px;
+  }
+}
+.product__table .product__option {
+  border-color: #323132;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #323132;
+}
+
+@-webkit-keyframes transform {
+  0% {
+    opacity: 0;
+    transform: translatey(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes transform {
+  0% {
+    opacity: 0;
+    transform: translatey(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.product__grid {
+  display: flex;
+  margin: 0 -70px;
+  width: calc(100% + 140px);
+  flex-wrap: wrap;
+  display: none;
+}
+@media (max-width: 650px) {
+  .product__grid {
+    width: calc(100% + 60px);
+  }
+}
+.product__grid img {
+  width: 33.333%;
+  max-height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product__grid img:nth-child(3) ~ img {
+  width: 50%;
+  max-height: none;
+}
+
+.product__close {
+  position: sticky;
+  display: none;
+  z-index: 1;
+  top: 0;
+  margin-right: -40px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: auto;
+  color: transparent;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' stroke='%23fff' stroke-width='2' fill='%23fff' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  white-space: nowrap;
+  border: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 650px) {
+  .product__close {
+    margin-top: -26px;
+    margin-right: 0;
+  }
+}
+
+.product__overlay {
+  width: 80%;
+  display: none;
+  overflow: hidden;
+  height: 40px;
+  background-color: red;
+  flex-shrink: 0;
+}
+
+.container--detail .product:not(.product--active) {
+  opacity: 0.3;
+}
+.container--detail .product:not(.product--active):hover {
+  opacity: 0.7;
+}
+
+.container:not(.container--detail) .product:hover {
+  box-shadow: 0 4px 0 0 var(--main-color) inset;
+}
+
+.container:not(.container--detail) .product:hover .product__img {
+  transform: scale(1.07);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#openPopup {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popupContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+#popupText {
+  text-align: justify;
+}
+
+#closePopup {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.trwpwhatsappballon {
+font-size: 14px;
+border-radius: 12px; 
+border: 1px solid #fff;
+max-width: 250px;
+}
+
+.trwpwhatsapptitle {
+background-color: #22c15e; 
+color: white; 
+padding: 14px; 
+border-radius: 12px 12px 0px 0px;
+text-align: center;
+}
+
+.trwpwhatsappmessage {
+padding: 16px 12px;
+background-color: white;
+}
+
+.trwpwhatsappinput {
+background-color: white;
+border-radius: 0px 0px 12px 12px;
+}
+
+.trwpwhatsappinput input {
+width: 206px;
+border-radius: 10px;
+margin: 1px 1px 0px 10px;
+padding:10px;
+font-family: "Raleway", Arial, sans-serif;
+font-weight: 300;
+font-size: 13px;
+background-color: #efefef;
+border: 1px solid #d4d4d4;
+}
+
+.trwpwhatsappbutton {
+background-color: #22c15e; 
+border-radius: 20px; 
+padding: 8px 15px; 
+cursor: pointer; 
+color: #fff;
+max-width: 220px;
+margin-top: 10px;
+margin-bottom: 10px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.trwpwhatsappall {
+position: fixed; 
+z-index: 9999999999999999999; 
+bottom: 0; 
+right: 10px;
+font-family: "Raleway", Arial, sans-serif;
+font-weight: 300;
+font-size: 15px;
+}
+
+.trwpwhatsappsendbutton {
+  color: #22c15e;
+  cursor:pointer;
+}
+
+button {border: none;}
+button i {
+float: right;
+position: absolute;
+z-index: 999999999999;
+right: 23px;
+top: 11;
+bottom: 81px;
+font-size: 18px !important;
+}
+
+.kapat {
+position: absolute;
+right: 8px;
+top: 6px;
+font-size: 13px;
+border: 1px solid #fff;
+border-radius: 99px;
+padding: 2px 5px 2px 5px;
+color: white;
+font-size: 10px;
+cursor: pointer;
+}
+
+
+
+</style>
+
+
+
+
+        
+        <title>Sanchez Cigar</title>
+    </head>
+    
+    
+    <body>
+    
+
+         
+    
+     
+    
+ 
+
+
+     
+        <section class="content">
+            
+            
+            
+             
+               
+               
+           
+
+            <section class="section-about">
+           <div class="header__textbox">
+                    <h1> <img src="img/logo.svg">
+                </div>
+            </section>
+
+
+
+
+
+
+
+            <section class="section-new">
+                <div>
+                    <h2 class="heading-secondary">LA AURORA</h2>
+                    <p class="paragraph"> 
+                        La Aurora is the country’s oldest cigar manufacturer. When La Aurora succeeded the Dominican Republic did too.
+In 1903, 18-year-old Eduardo León Jimenes opened the La Aurora factory on land he had inherited. Eduardo’s father was a tobacco farmer and had taught him the way of the leaf, and Eduardo in turn passed on the knowledge and skill to his sons, most nnotable amongst them being Francisco Fernando who would forever change the company’s trajectory.
+                    </p>
+                </div>
+                <div class="grid u-margin-top-medium">
+                      
+                    
+                    
+                 
+                    
+                    <div class="col-1-of-4 grid-item">
+                        <figure class="grid-figure">
+                            <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/au2.png" alt="Flutter Sleeve Solid Ruffle Dress" onclick="showPopup2()">
+                              
+                              
+                            <figcaption class="pricetag" onclick="showPopup2()">TOBACCO - <span class="price">LA AURORA</span></figcaption> 
+                        </figure>
+                    </div>    
+                   
+                  
+                
+                    
+
+
+                    </div>
+                    <div class="grid">
+                        
+                    </div>
+                    
+                </div>   
+              
+            </section>
+
+            
+           
+            <section class="section-best">
+                
+            </section>
+            
+            <section class="section-collections">
+                <h2 class="heading-secondary">Selected Collection</h2>
+               
+                <div class="grid u-margin-top-small">
+                    <div class="col-1-of-4 card">
+                        <div class="card__wrapper">
+                            <h3 class="card__title">DON YAYO</h3>
+                            <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/don-y.png" alt="Spring Collection" onclick="openLink('index.html')">
+                            <p class="card__description">These cigars are definitely not the prettiest cigars around but they sure taste good and provide a nice smooth medium smoke. Combined with a really cheap price this cigar is a no brainier when it comes to price quality and taste.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-of-4 card">
+                        <div class="card__wrapper">
+                            <h3 class="card__title">EL BALSERO</h3>
+                            <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/balsero-t.png" alt="Summer Collection" onclick="openLink('index.html')">
+                            <p class="card__description">“The Rafter”, celebrate the brave risk takers who, determined to escape persecution, seek freedom and opportunity in the greatest country in the world! El Basero cigars pay homage to the journey many Cubans take to get a chance at achieving the American dream.</p>
+                        </div>       
+                    </div>    
+                    <div class="col-1-of-4 card">
+                        <div class="card__wrapper">
+                            <h3 class="card__title">EL CANTOR ROJO</h3>
+                            <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/centor-r.png" alt="Fall Collection" onclick="openLink('index.html')">
+                            <p class="card__description">It is a truly excellent flavored fully aged cigar that has a distinctive taste. Completely handcrafted from select aged tobaccos. El Cantor Corojo has tobaccos that are grown in the Valley of Nicaragua, a region where the perfect soil and the ideal climate can give the cigar the delicious flavor.</p>
+                        </div>     
+                    </div>     
+                    <div class="col-1-of-4 card">
+                        <div class="card__wrapper">
+                            <h3 class="card__title">LUCERO</h3>
+                            <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/lucero-t.png" alt="Winter Collection" onclick="openLink('index.html')">
+                            <p class="card__description">Tasty smoke that is pretty smooth to boot, 
+perfect for any occasion, LUCERO is the 
+perfect way to light up on the drive home 
+from work, or to hand out to buddies who 
+want a cigar, without having to spoil them 
+or have them waste an expensive cigar.</p>
+                        </div>  
+                    </div>   
+                    
+                </div>
+                        
+                
+            
+
+
+                <div class="container2">
+  <div class="nav">
+    <div class="logo">
+      <img class="svg-image" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/logo-sanchez2.svg" alt="Descripción de la imagen">
+    </div>
+    <div class="nav__text">Sanchez Cigar</div>
+    <div class="nav__cart">
+      <svg class="nav__shop" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+      </svg>
+       
+    </div>
+    
+    
+    
+  </div>
+  
+ 
+ <div class="cover2"></div>
+  <div class="product" data-index="0">
+  <button class="closeButton" onclick="closePopup2()">Close</button>
+    <div class="product__new"></div>
+    <img class="product__img" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/au-1.png"/>
+    <div class="product__brand">LA AURORA</div>
+    <div class="product__title">Belicoso</div>
+    <div class="product__price">$99,99</div>
+    <div class="product__buttons" style="--delay: 0.2s"></div>
+    <div class="product__subtitle">
+    
+    
+<p>QUANTITY: BOX OF 25</p>
+<p>COUNTRY: DOMINICAN REPUBLIC</p>
+<p>WRAPPER: CAMEROON</p>
+<p>BINDER: DOMINICAN REPUBLIC</p>
+<p>FILLER: DOMINICAN REPUBLIC, NICARAGUA</p>
+<p>STRENGTH: MEDIUM</p>
+<p>COLOR: NATURAL</p>
+<p>LENGTH: 6 1/4</p>
+<p>RING SIZE: 52</p>
+
+    
+ 
+    
+    <div>
+   
+    </div>
+    
+    </div>
+  
+       <div class="product__detail">
+  <a href="https://api.whatsapp.com/send/?phone=%2B17867571595&text=I+am+interested+in+Tobacco+LA+AURORA+BELICOSO&type=phone_number&app_absent=0" class="btn btn-full">BUY NOW</a>
+</div>
+  
+  </div>
+  
+  
+  
+  <div class="product" data-index="0">
+    <div class="product__new"></div>
+    <img class="product__img" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/petit2.png"/>
+    <div class="product__brand">LA AURORA</div>
+    <div class="product__title">Petit Coronas</div>
+    <div class="product__price">$79,99</div>
+    <div class="product__buttons" style="--delay: 0.2s"></div>
+    <div class="product__subtitle">
+    
+    <p>Packaging:Box of 25</p>
+<p> </p>
+<p>COUNTRY: DOMINICAN REPUBLIC</p>
+<p>WRAPPER: CAMEROON</p>
+<p>BINDER: DOMINICAN REPUBLIC</p>
+<p>FILLER: DOMINICAN REPUBLIC, NICARAGUA</p>
+<p>STRENGTH: MEDIUM</p>
+<p>COLOR: NATURAL</p>
+<p>LENGTH: 4 1/2</p>
+<p>RING SIZE: 37</p>
+    
+ 
+    
+    <div>
+   
+    </div>
+    
+    </div>
+  
+       <div class="product__detail">
+  <a href="https://api.whatsapp.com/send/?phone=%2B17867571595&text=I+am+interested+in+Tobacco+LA+AURORA+PETIT+CORONAS&type=phone_number&app_absent=0" class="btn btn-full">BUY NOW</a>
+</div>
+  
+  </div>
+
+                
+                
+                
+                 
+                                  <div class="product" data-index="0">
+    <div class="product__new"></div>
+    <img class="product__img" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/cetros2.png"/>
+    <div class="product__brand">LA AURORA</div>
+    <div class="product__title">Cetros</div>
+    <div class="product__price">$85,99</div>
+    <div class="product__buttons" style="--delay: 0.2s"></div>
+    <div class="product__subtitle">
+    
+    <p>Packaging:Box of 25</p>
+<p> </p>
+<p>COUNTRY: DOMINICAN REPUBLIC</p>
+<p>WRAPPER: CAMEROON</p>
+<p>BINDER: DOMINICAN REPUBLIC</p>
+<p>FILLER: DOMINICAN REPUBLIC, NICARAGUA</p>
+<p>STRENGTH: MEDIUM</p>
+<p>COLOR: NATURAL</p>
+<p>LENGTH: 6 3/8</p>
+<p>RING SIZE: 41</p>
+
+    <div>
+   
+    </div>
+    
+    </div>
+  
+       <div class="product__detail">
+  <a href="https://api.whatsapp.com/send/?phone=%2B17867571595&text=I+am+interested+in+Tobacco+LA+AURORA+CETROS&type=phone_number&app_absent=0" class="btn btn-full">BUY NOW</a>
+</div>
+  
+  </div>
+        
+        
+     
+        
+        
+         <div class="product" data-index="0">
+    <div class="product__new"></div>
+    <img class="product__img" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/bristol.png"/>
+    <div class="product__brand">LA AURORA</div>
+    <div class="product__title">Bristol</div>
+    <div class="product__price">$85,99</div>
+    <div class="product__buttons" style="--delay: 0.2s"></div>
+    <div class="product__subtitle">
+    
+    <p>Packaging:Box of 25</p>
+<p> </p>
+<p>COUNTRY: DOMINICAN REPUBLIC</p>
+<p>WRAPPER: CAMEROON</p>
+<p>BINDER: DOMINICAN REPUBLIC</p>
+<p>FILLER: DOMINICAN REPUBLIC, NICARAGUA</p>
+<p>STRENGTH: MEDIUM</p>
+<p>COLOR: NATURAL</p>
+<p>LENGTH: 6 3/4</p>
+<p>RING SIZE: 48</p>
+
+    <div>
+   
+    </div>
+    
+    </div>
+  
+       <div class="product__detail">
+  <a href="https://api.whatsapp.com/send/?phone=%2B17867571595&text=I+am+interested+in+Tobacco+LA+AURORA+BRISTOL&type=phone_number&app_absent=0" class="btn btn-full">BUY NOW</a>
+</div>
+  
+  </div>
+  
+  
+          
+          
+          
+          
+          
+                
+        
+         <div class="product" data-index="0">
+    <div class="product__new"></div>
+    <img class="product__img" src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/palma.png"/>
+    <div class="product__brand">LA AURORA</div>
+    <div class="product__title">Palma Extra</div>
+    <div class="product__price">$89,99</div>
+    <div class="product__buttons" style="--delay: 0.2s"></div>
+    <div class="product__subtitle">
+    
+    <p>Packaging:Box of 25</p>
+<p> </p>
+<p>COUNTRY: DOMINICAN REPUBLIC</p>
+<p>WRAPPER: CAMEROON</p>
+<p>BINDER: DOMINICAN REPUBLIC</p>
+<p>FILLER: DOMINICAN REPUBLIC, NICARAGUA</p>
+<p>STRENGTH: MEDIUM</p>
+<p>COLOR: NATURAL</p>
+<p>LENGTH: 6 3/4</p>
+<p>RING SIZE: 35</p>
+
+
+    <div>
+   
+    </div>
+    
+    </div>
+  
+       <div class="product__detail">
+  <a href="https://api.whatsapp.com/send/?phone=%2B17867571595&text=I+am+interested+in+Tobacco+LA+AURORA+PALMA+EXTRA&type=phone_number&app_absent=0" class="btn btn-full">BUY NOW</a>
+</div>
+  
+  </div>
+  
+  
+                
+          <div class="product__overlay">
+          
+          
+          
+          
+          
+          
+          </div>   
+          
+          
+          
+          
+          
+    
+          
+          
+              
+       
+
+          
+                                       
+            </section>
+
+
+
+
+
+
+
+   <div id="popupOverlay">
+  <div id="popupContent">
+    <div id="popupText">
+      
+       <h2>SANCHEZ CIGARS</h2>
+      <p><strong>Terms and conditions</strong></p>
+      <p><strong>LEGAL</strong></p>
+      <p>SANCHEZ CIGARS ON THIS SITE ARE NOT INTENDED FOR ANYONE UNDER THE AGE OF 21.</p>
+      <p>Prices subject to change without notice. Not responsible for typographical errors*. We reserve the right to limit quantities. Special orders for related merchandise can be filled upon request. We reserve the right to reject any order for any reason. No order shall be binding at Sanchez Cigars until we accept it. Items may be purchased from this website using a valid credit card or Paypal for payment. Shipping of items will be by UPS or USPS. Items must be shipped to an address where a person is available to sign for and receive said items. These terms and conditions of sale and the transactions contemplated thereby are governed solely by the laws of the State of Florida, and any and all claims related thereto must be brought and finally resolved solely in the courts of the State of Florida. By placing an order, you agree to all foregoing terms and conditions.</p>
+      <p>We comply with all current Florida tobacco laws & taxes. Outside of the state Florida, USA, taxes, tax compliance and/or all custom and duties are the responsibility of the individual customer. We are not responsible for any local laws and/or regulations at P the destination.</p>
+      <p>All transactions are FOB Miami, Florida. Please refer to our complete shipping rules.</p>
+      <p><strong>SECURITY</strong></p>
+      <p>We guarantee that every transaction you make at www.sanchezcigar.com will be 100% safe. Our secure server software (SSL) is the industry standard and among the best software available today for secure commerce transactions. It encrypts all of your personal information, including credit card number, name and address, so that it cannot be read as the information travels over the Internet. All bells and whistles of the cutting edge technology are being employed on this website for your safety. Your information is extremely important to us and we take extra effort to guarantee your transaction's safety and this commitment. We employ independent security services that monitor the website 24/7 and provide alerts for any breach.</p>
+      <p><strong>PRIVACY</strong></p>
+      <p>The information we collect will be used to notify customers about updates to our web site and periodic specials. We do not share the information with other organizations for any purpose.</p>
+      <p><strong>DISCLAIMERS</strong></p>
+      <p>We reserve the right to cancel and fully refund the customer in any case of a typographical error or honest mistake that is clearly obvious that occurred on our web site. We will always try our best to accommodate any customer that was offended in such case in an amicable solution but sometimes we simply can't ship in this situation.</p>
+      <p>All gift certificates must be mailed back to us in order to be redeemed. You must make a purchase to redeem a gift certificate.</p>
+      <p>Brands that are promoted with a gift certificate for every box, the box must contain at least 20 Sanchez cigars. Boxes with 19 cigars or less require a purchase of two boxes.</p>
+      <p>On brands with a discounted second box/bundle, the second box/bundle must be of equal or lesser value than the first box/bundle.</p>
+      <p>Application of gift certificate credit is subject to the "Gift Certificate Program" restrictions.</p>
+      <p>Samplers and free items - While we make every attempt to fill every order according to specified items, we sometimes have an "out of stock" situation. We reserve the right to substitute items with equal or better value items.</p>
+      <p>Samplers - In samplers that include Sanchez cigars from different brands we reserve the right to replace a specific cigar with equal or higher value substitute.</p>
+      <p>colors, shades, size and other physical features of Sanchez cigars displayed on this web site may look bigger, smaller or otherwise different than the actual Sanchez cigars we sell</p>
+      <p><strong>RETURN POLICY</strong></p>
+      <p>All returned items must be pre-approved with authorization by email. All returns must be in the original packaging and "new" condition as all merchandise shipped from our warehouse leaves here in perfect condition. All gift items must be included together with the returned items. If the gift item is not included in the return, it's value will be deducted from the credit for the returned item. In the unlikely event that you should doubt the quality of an item, you must notify us within 72 hours of receiving the merchandise to obtain a written return Authorization Number. Merchandise that will be returned or refused without authorization, will be subject to 50% restocking fee or $15 whichever is more. "Collector items", lighters or limited edition items are not returnable. Sanchez Cigar Samplers, Double Stacks, Sanchez Cigar Combos and Triple Deckers are not returnable. Once you have obtained an Authorization Number, you should mark it clearly on the package next to the address label. All returns will be reviewed and subjected to applicable restocking fee and shipping charge as all returns cannot be resold. Buyers remorse is not accepted for any returns. All Sanchez Cigars orders are automatically processed by our secure merchant processor and sent for shipment as soon as possible. During this process, we incur irreversible fees as part of the shipping process, and as such, we are unfortunately unable to cancel orders free of charge. All orders that are cancelled before shipping has occurred, will be assessed a 7% cancellation fee (or a minimum of $10) before any credit is issued. An order will not be considered for cancellation after it has shipped. It will be treated as a return with all applicable fees.</p>
+      <p><strong>FRESHNESS GUARANTEE</strong></p>
+      <p>We take quality control very seriously. All the Sanchez cigars we ship are shipped either in sealed boxes or, in case of single sticks or 5-packs, in properly sealed bags. Most cigars in our samplers are super-premium Sanchez cigars and we do everything to guarantee freshness upon arrival.</p>
+      <p>With that said please let me add that shipping individual Sanchez cigars to the pacific north-west by GROUND service is not recommended, especially in the summer By exposing the Sanchez cigars to the hot conditions in regular postal service or U.P.S. trucks we sacrifice all of the benefits described above.</p>
+      <p>We strongly recommend to purchase the Sanchez cigars in the ORIGINAL box that was packed and sealed at the factory, and ship cross country by AIR not by ground.</p>
+    </div>
+    <button id="closePopup" class="btn btn-full">Accept</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      
+         
+         
+
+        <footer class= "footer">
+            <div class="grid">
+                <div class="col-1-of-5 footer__help">
+                    <div class="heading-tiny">HELP</div>
+                    <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                        <li><a href="#">About Us</a></li>
+                        <button id="openPopup" style="color: #c9bd68; text-decoration: none;">Terms & Conditions</button>
+                    </ul>
+                </div>    
+                <div class="col-1-of-5 footer__social">
+                    <div class="heading-tiny">Our social networks</div>
+                    <ul>
+                        <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                        <li><a href="https://instagram.com/sanchezcigar">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-3-of-5 footer__signup">
+                    <p>
+                        For more information, please contact us at the following email address: sanchezcigars@gmail.com. We would be delighted to assist you.
+                    </p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanchezcigar@gmail.com" class="btn btn-full">E-Mail</a>    
+                </div>
+            </div>
+            <a href ="#"><img src="img/logo.svg" alt="Lavender Boutique logo" class="footer__logo"></a>
+            <div class="footer__copyright">
+       
+            <p><strong>Address</strong></p>
+       <p> <a href="https://www.google.com/maps/place/Sanchez+Cigars/@25.6114511,-80.3720166,15z/data=!4m6!3m5!1s0x88d9c37b1a299149:0x4da44f237dc69afc!8m2!3d25.6114511!4d-80.3720166!16s%2Fg%2F11mgr1nf9z?entry=ttu" target="_blank" style="color: #c9bd68; text-decoration: none;">10965 SW 169th Terrace, Miami, FL 33157, Estados Unidos</a></p>
+
+      
+      
+            
+                
+                <p>Copyright &copy; 2023 by Sergio G. All rights reserved.</p>
+                
+            </div>
+            
+            
+            
+            
+                  <!-- TR-WP.COM -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<div class="trwpwhatsappall">
+<div class="trwpwhatsappballon">
+ <span id="kapatac" class="kapat">X</span>
+  <div class="trwpwhatsapptitle">
+     Our WhatsApp support team answers your questions.
+  </div>
+  <div class="trwpwhatsappmessage">
+     Hello how can I help you?
+  </div>
+  <div class="trwpwhatsappinput">
+    <form action="https://api.whatsapp.com/send/?phone=%2B&text=" method="get" target="_blank">
+      <input type="text" name="phone" value="17867571595" hidden>
+    	<input type="text" name="text" placeholder="Write us for more information." autocomplete="off">
+      <button class="trwpwhatsappsendbutton" type="submit">
+      <i class="fa fa-paper-plane-o"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<div id="ackapa" class="trwpwhatsappbutton">
+<i class="fa fa-whatsapp"></i> <span>WhasApp Desk</span>
+</div>
+            
+            
+            
+        </footer>
+
+
+
+
+<script>
+// TR-WP.COM
+
+$(document).ready(function() {
+$("#ackapa").click(function() {
+$(".trwpwhatsappballon").toggle(1000);
+});
+$("#kapatac").click(function() {
+$(".trwpwhatsappballon").toggle(1000);
+});
+});
+</script>
+
+
+
+
+
+<script>
+
+const openPopupButton = document.getElementById('openPopup');
+const closePopupButton = document.getElementById('closePopup');
+const popupOverlay = document.getElementById('popupOverlay');
+
+openPopupButton.addEventListener('click', function() {
+  popupOverlay.style.display = 'flex';
+});
+
+closePopupButton.addEventListener('click', function() {
+  popupOverlay.style.display = 'none';
+});
+
+</script>
+
+
+
+
+<script>
+// Función para abrir el enlace
+function openLink(url) {
+    window.location.href = url;
+}
+</script>
+
+
+
+
+
+  <script>
+
+  
+    function showPopup2() {
+      // Obtener el contenedor del pop-up
+      var container = document.querySelector('.container2');
+
+      // Establecer la propiedad 'display' en 'flex'
+      container.style.display = 'flex';
+    }
+
+    function hidePopup() {
+      // Obtener el contenedor del pop-up
+      var container = document.querySelector('.container2');
+
+      // Establecer la propiedad 'display' en 'none'
+      container.style.display = 'none';
+    }
+    
+    
+    
+    function closePopup2() {
+  var container2 = document.querySelector(".container2");
+  container2.style.display = "none";
+}
+
+
+
+  
+  </script>
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    
+<script>
+var buttons = document.querySelectorAll(".toggle-button");
+var modal = document.querySelector("#modal");
+
+[].forEach.call(buttons, function (button) {
+  button.addEventListener("click", function () {
+    modal.classList.toggle("off");
+  });
+});
+
+</script>
+
+
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- partial -->
+  <script  src="./script.js"></script>
+  
+    </body>
+    
+</html>
